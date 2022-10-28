@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Algorithm</title>
+    <style>
+        body{
+            background-color: rgb(226, 245, 197);
+        }
+    </style>
+</head>
+<body>
+    <h5>Request queue (0-199):</h5>
+   <script>
+
+    var size = prompt("Enter no. of requests : ");
+    var request = [];
+
+    //Input
+    for(let i=0;i<=size; i++){
+        request[i] = prompt("Enter Request Inputs :");
+    }
+    
+    var head = prompt("Enter head : ");
+
+    //Display Values
+    for(let i =0; i<=size; i++){
+    document.write( request[i] + " ")
+    }
+
+    FCFS(request, head);
+
+ function FCFS(request, head)
+ {
+
+     var seek_count = 0;
+     var distance, cur_track;
+  
+     for(var i = 0; i < size; i++)
+     {
+         cur_track = request[i];
+          
+         distance = Math.abs(cur_track - head);
+  
+         seek_count += distance;
+  
+         head = cur_track;
+     }
+    
+     document.write("<br><br>Total number of " +
+                    "seek operations = " +
+                    seek_count);
+  
+     document.write("<br><br>Seek Sequence is");
+  
+     for(var i = 0; i < size; i++)
+     {
+         document.write("<br><br>" + request[i]);
+     }
+ }
+ 
+   </script>
+
+<canvas id="myCanvas" width="200" height="200" style="border: 1px solid red"></canvas>
+
+<script>
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(10 , 0);
+    ctx.lineTo(10 , 200);
+    ctx.stroke();
+
+    
+    ctx.moveTo(20 , 0);
+    ctx.lineTo(20 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(30 , 0);
+    ctx.lineTo(30 , 200);
+    ctx.stroke();
+   
+    ctx.moveTo(40 , 0);
+    ctx.lineTo(40 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(50 , 0);
+    ctx.lineTo(50 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(60 , 0);
+    ctx.lineTo(60 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(70 , 0);
+    ctx.lineTo(70 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(80 , 0);
+    ctx.lineTo(80 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(90 , 0);
+    ctx.lineTo(90 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(100 , 0);
+    ctx.lineTo(100 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(110 , 0);
+    ctx.lineTo(110 , 200);
+    ctx.stroke();
+   
+    ctx.moveTo(120 , 0);
+    ctx.lineTo(120 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(130 , 0);
+    ctx.lineTo(130 , 200);
+    ctx.stroke();
+   
+    ctx.moveTo(140 , 0);
+    ctx.lineTo(140 , 600);
+    ctx.stroke();
+    
+    ctx.moveTo(150 , 0);
+    ctx.lineTo(150 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(160 , 0);
+    ctx.lineTo(160 , 200);
+    ctx.stroke();
+   
+    ctx.moveTo(170 , 0);
+    ctx.lineTo(170 , 200);
+    ctx.stroke();
+   
+    ctx.moveTo(180 , 0);
+    ctx.lineTo(180 , 200);
+    ctx.stroke();
+    
+    ctx.moveTo(190 , 0);
+    ctx.lineTo(190 , 200);
+    ctx.stroke();
+
+    ctx.moveTo(50 , 20);
+    ctx.lineTo(176 , 40);
+    ctx.lineTo(79 , 70);
+    ctx.lineTo(34 , 90);
+    ctx.lineTo(60 , 120);
+    ctx.lineTo(92 , 140);
+    ctx.lineTo(11 , 160);
+    ctx.lineTo(34 , 180);
+    ctx.lineTo(114 , 190);
+
+    ctx.stroke();
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-LOOK</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(226, 245, 197);
+        }
+        .c-look{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            text-align: center; 
+            text-shadow: -3px 3px 5px red;   
+        }
+        p{
+            font-size: 22px;
+        }
+        .what-c-look{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 500px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .what-c-look:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        .algorithm{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 400px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;       
+        }
+        .algorithm:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        li{
+            font-weight: bold;
+        }
+        .advantages{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .advantages:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        .disadvantages{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .disadvantages:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color:black;
+            box-shadow: -10px -10px 10px 0.5px gray;
+        }    
+    </style>
+</head>
+<body>
+    <div class="c-look">
+        <h1>C-LOOK</h1>
+    </div>
+    <div class="c-look">
+    <h1>What is C-LOOK Disk Scheduling Algorithm : What is, Example, Program</h1>
+    </div>
+    <div class="what-c-look">
+    <h1>What is C-LOOK?</h1>
+    <p>Given an array of disk track numbers and initial head position, our task is to find the total number of seek operations done to access all the requested tracks if C-LOOK disk scheduling algorithm is used. Also, write a program to find the seek sequence using C-LOOK disk scheduling algorithm.
+<br><br>
+       <b>C-LOOK (Circular LOOK) Disk Scheduling Algorithm:</b>  
+        C-LOOK is an enhanced version of both SCAN as well as LOOK disk scheduling algorithms. This algorithm also uses the idea of wrapping the tracks as a circular cylinder as C-SCAN algorithm but the seek time is better than C-SCAN algorithm. We know that C-SCAN is used to avoid starvation and services all the requests more uniformly, the same goes for C-LOOK. 
+        In this algorithm, the head services requests only in one direction(either left or right) until all the requests in this direction are not serviced and then jumps back to the farthest request on the other direction and service the remaining requests which gives a better uniform servicing as well as avoids wasting seek time for going till the end of the disk.</p>
+    </div>
+<br><br><br><br>
+    <div class="algorithm">
+        <h1>Algorithm</h1>
+        <ul>
+            <li>Let Request array represents an array storing indexes of the tracks that have been requested in ascending order of their time of arrival and head is the position of the disk head.</li>
+            <li>The initial direction in which the head is moving is given and it services in the same direction.</li>
+            <li>The head services all the requests one by one in the direction it is moving.</li>
+            <li>The head continues to move in the same direction until all the requests in this direction have been serviced.</li>
+            <li>While moving in this direction, calculate the absolute distance of the tracks from the head.</li>
+            <li>Increment the total seek count with this distance.</li><br>
+            <li>Currently serviced track position now becomes the new head position.</li>
+            <li>Go to step 5 until we reach the last request in this direction.</li>
+            <li>If we reach the last request in the current direction then reverse the direction and move the head in this direction until we reach the last request that is needed to be serviced in this direction without servicing the intermediate requests.</li>
+            <li>Reverse the direction and go to step 3 until all the requests have not been serviced.</li>
+        </ul>
+    </div>
+<br><br><br><br>
+    <div class="advantages">
+        <h1>Advantages of C-LOOK</h1>
+        <h4>Here, are pros/benefits of using C-LOOK Disk scheduling algorithm:</h4>
+        <ul>
+            <li>It does not causes the head to move till the ends of the disk when there are no requests to be serviced.</li><br>
+            <li>It reduces the waiting time for the cylinders just visited by the head.</li><br>
+            <li>It provides better performance as compared to LOOK Algorithm.</li><br>
+            <li>It does not lead to starvation.</li><br>
+            <li>It provides low variance in response time and waiting time.</li>
+        </ul>
+    </div>
+<br><br><br><br>
+<div class="disadvantages">
+    <h1>Disadvantages of C-LOOK</h1>
+    <h4>Here, are cons/ drawbacks of using LOOK Disk scheduling algorithm:</h4>
+    <ul>
+        <li>There is an overhead of finding the end requests.</li><br>
+    </ul>
+</div>
+<br><br><br><br>
+</body>
+</html>

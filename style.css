@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(226, 245, 197);
+}
+li{
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: royalblue;
+}
+
+.container{
+    /* width: 80%; */
+    margin: 0.5rem auto;
+}
+#what-block-h1{
+    
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.what-block{
+    background-color:  rgb(226, 245, 197);      
+}
+.what-block-para{
+   display: flex;
+   margin-top: 30px;
+   font-size: 25px;
+}
+#what-block-img2{
+    width: 300px;
+    height: 300px;
+}
+.why-block{
+    background-color:  rgb(226, 245, 197);
+}
+.why-block-h1{
+   
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+.why-block p{
+    font-size: 25px;
+}
+.types-block-h1{
+    color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 0px;
+}
+.list-1{
+   background-color:  rgb(226, 245, 197);
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+   margin-top: 2px;
+}
+.list-1 p{
+    font-size: 24px;
+}
+.list-1-h1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0;
+    padding: 0;
+}
+#what-block-img1{
+    width: 400px;
+    height: 400px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: black;
+}

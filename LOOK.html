@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOK</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(226, 245, 197);
+    }
+    .look{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+        text-shadow: -3px 3px 5px red;   
+    }
+    p{
+        font-size: 22px;
+    }
+    .what-look{
+        padding: 20px;
+        margin: auto;
+        width: 800px;
+        height: 500px;
+        background-color: aliceblue;
+        border: 2px solid black;
+        border-radius: 10px;
+        transform: scale(1);
+        transition: 0.3 ease ease-in-out;
+    }
+    .what-look:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        background-color: rgb(206, 229, 249);
+        color: black;
+        box-shadow: -10px -10px 10px 0.5px gray ;
+    }
+    .algorithm{
+        padding: 20px;
+        margin: auto;
+        width: 800px;
+        height: 400px;
+        background-color: aliceblue;
+        border: 2px solid black;
+        border-radius: 10px;
+        transform: scale(1);
+        transition: 0.3 ease ease-in-out;       
+    }
+    .algorithm:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        background-color:rgb(206, 229, 249);
+        color: black;
+        box-shadow: -10px -10px 10px 0.5px gray ;
+    }
+    li{
+        font-weight: bold;
+    }
+    .advantages{
+        padding: 20px;
+        margin: auto;
+        width: 800px;
+        height: 300px;
+        background-color: aliceblue;
+        border: 2px solid black;
+        border-radius: 10px;
+        transform: scale(1);
+        transition: 0.3 ease ease-in-out;
+    }
+    .advantages:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        background-color: rgb(206, 229, 249);
+        color: black;
+        box-shadow: -10px -10px 10px 0.5px gray ;
+    }
+    .disadvantages{
+        padding: 20px;
+        margin: auto;
+        width: 800px;
+        height: 300px;
+        background-color: aliceblue;
+        border: 2px solid black;
+        border-radius: 10px;
+        transform: scale(1);
+        transition: 0.3 ease ease-in-out;
+    }
+    .disadvantages:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        background-color: rgb(206, 229, 249);
+        color:black;
+        box-shadow: -10px -10px 10px 0.5px gray;
+    }    
+</style>
+</head>
+<body>
+    <div class="look">
+        <h1>LOOK</h1>
+    </div>
+    <div class="look">
+    <h1>What is LOOK Disk Scheduling Algorithm : What is, Example, Program</h1>
+    </div>
+    <div class="what-look">
+    <h1>What is LOOK?</h1>
+    <p>Given an array of disk track numbers and initial head position, our task is to find the total number of seek operations done to access all the requested tracks if LOOK disk scheduling algorithm is used. Also, write a program to find the seek sequence using LOOK disk scheduling algorithm.
+<br><br>
+    <b>LOOK Disk Scheduling Algorithm:</b> 
+    LOOK is the advanced version of SCAN (elevator) disk scheduling algorithm which gives slightlybetter seek time than any other algorithm in the hierarchy (FCFS->SRTF->SCAN->C-SCAN->LOOK). TheLOOK algorithm services request similarly as SCAN algorithm meanwhile it also “looks” ahead asif there are more tracks that are needed to be serviced in the same direction. If there are nopending requests in the moving direction the head reverses the direction and start servicingrequests in the opposite direction.
+    The main reason behind the better performance of LOOK algorithm in comparison to SCAN is becausein this algorithm the head is not allowed to move till the end of the disk.</p>
+    </div>
+<br><br><br><br>
+    <div class="algorithm">
+        <h1>Algorithm</h1>
+        <ul>
+            <li>Let Request array represents an array storing indexes of tracks that have been requested in ascending order of their time of arrival. ‘head’ is the position of disk head.</li>
+            <li>The initial direction in which head is moving is given and it services in the same direction.</li>
+            <li>The head services all the requests one by one in the direction head is moving.</li>
+            <li>The head continues to move in the same direction until all the request in this direction are finished.</li>
+            <li>While moving in this direction calculate the absolute distance of the track from the head.</li>
+            <li>Increment the total seek count with this distance.</li><br>
+            <li>Currently serviced track position now becomes the new head position.</li>
+            <li>Go to step 5 until we reach at last request in this direction.</li>
+            <li>If we reach where no requests are needed to be serviced in this direction reverse the direction and go to step 3 until all tracks in request array have not been serviced.</li>
+        </ul>
+    </div>
+<br><br><br><br>
+    <div class="advantages">
+        <h1>Advantages of LOOK</h1>
+        <h4>Here, are pros/benefits of using LOOK Disk scheduling algorithm:</h4>
+        <ul>
+            <li>In Look disk scheduling, there is no starvation.</li><br>
+            <li>Look disk scheduling offers low variance in waiting time and response time.</li><br>
+            <li>Look disk scheduling offers better performance as compared to the SCAN disk scheduling</li><br>
+            <li>In look disk scheduling, there is no requirement of disk head to move till the end to the disk when we do not have any request to be serviced.</li>
+        </ul>
+    </div>
+<br><br><br><br>
+<div class="disadvantages">
+    <h1>Disadvantages of LOOK</h1>
+    <h4>Here, are cons/ drawbacks of using LOOK Disk scheduling algorithm:</h4>
+    <ul>
+        <li>In look disk scheduling, there is more overhead to find the end request.</li><br>
+        <li>Look disk scheduling is not used in case of more load.</li><br>
+    </ul>
+</div>
+<br><br><br><br>
+</body>
+</html>

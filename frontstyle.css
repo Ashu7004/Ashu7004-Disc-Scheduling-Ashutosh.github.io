@@ -1,0 +1,181 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(226, 245, 197);
+}
+li{
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: black;
+    font-size: 60px;
+}
+.nav-links ul{
+    display: flex;
+    gap: 2rem;
+    font-size: 22px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+img{
+    border-radius: 15%;
+}
+.simulation-image{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.simulation-image p{
+    font-size: 25px;
+}
+@keyframes fade-inout{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.btn-1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+.btn{
+    color: black;
+    background-color: rgb(238, 249, 221);
+    font-weight: bold;
+    border-radius: 0.4em;
+    padding: 1em 1.5em;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    transform: scale(1);
+    transition: 0.3 ease-in-out;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+.input:hover{
+    background-color: gainsboro;
+}
+.btn-menu-1{
+    display: none;
+}
+.btn-menu-1 ul li a{
+    text-decoration: none;
+}
+.btn-menu-1 ul li a:hover{
+    color: black; 
+}
+.btn-1 ul li:hover .btn-menu-1{
+    display: block;
+    position: absolute;
+    margin-left: 15px;
+    background-color: rgb(238, 249, 221);
+    border-radius: 20px;
+}
+.btn-1 ul li:hover .btn-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.btn-1 ul li:hover .btn-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    background-color: transparent;
+    text-align: center;
+    border-bottom: 1px dotted black;
+}
+.btn-1 ul li:hover .btn-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+@keyframes fade-inout{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.what-disk{
+    width: 100%;
+    height: 900px;
+    padding: 20px;
+    margin: auto;
+    background-color: rgb(244, 249, 253);
+}
+.what-disk p{
+    font-weight: bold;
+    font-size: 18px;
+}
+.what-disk li{
+    font-weight: bold;
+    list-style-type: disc;
+    font-size: 18px;
+}
+
+.various-types{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: fade-inout 5s infinite alternate;
+}
+
+.various-types-property{
+    display: flex;
+    justify-content: center;
+    gap: 30px 20px;
+    align-items: center;
+    background-color: white;
+    
+}
+.property{
+    
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: auto;
+    background-color: aliceblue;
+    transform: scale(1);
+    transition: 0.3 ease-in-out;
+}
+.property:hover{
+    transform: scale(1.12);
+    background-color: antiquewhite;
+    box-shadow: -10px -10px 10px 0.5px gray;
+}
+.pro-para{
+    font-weight: bold;
+}
+.btn-fcfs{
+    color: black;
+    background-color: rgb(249, 212, 149);
+    font-weight: bold;
+    border-radius: 0.4em;
+    padding: 0.5em 1.5em;
+    margin: auto;
+    width: auto;
+    height: auto;
+   
+}
+.btn-fcfs:hover{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}

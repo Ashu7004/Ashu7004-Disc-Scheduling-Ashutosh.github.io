@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSTF</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(226, 245, 197);
+        }
+        .sstf{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            text-align: center; 
+            text-shadow: -3px 3px 5px red;   
+        }
+        p{
+            font-size: 22px;
+        }
+        .what-sstf{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 400px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .what-sstf:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        .algorithm{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;       
+        }
+        .algorithm:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        li{
+            font-weight: bold;
+        }
+        .advantages{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .advantages:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        .disadvantages{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .disadvantages:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color:black;
+            box-shadow: -10px -10px 10px 0.5px gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sstf">
+        <h1>SSTF</h1>
+    </div>
+    <div class="sstf">
+    <h1>What is SSTF Disk Scheduling Algorithm : What is, Example, Program</h1>
+    </div>
+    <div class="what-sstf">
+    <h1>What is Shortest Seek Time First?</h1>
+    <p>Disk scheduling algorithms are the algorithms that are used for scheduling a disk. Generally, the scheduling refers to a time-table for completing any task or a job. With the help of the operating system, disk scheduling is performed. Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O scheduling.
+<br>
+  <b>Shortest seek time first</b> is another type of scheduling algorithm. In this type of disk scheduling, the job which has less seek time will be executed first. So, in SSTF (shortest seek time first) scheduling, we have to calculate the seek time first. And after calculating the seek time, each request will be served on the basis of seek time. The request which is close to the disk arm will be first executed. There are some drawbacks in FCFS. To overcome the limitations that arise in the FCFS. SSTF scheduling is implemented.
+        
+        </p>
+    </div>
+<br><br><br><br>
+    <div class="algorithm">
+        <h1>Algorithm</h1>
+        <ul>
+            <li>Let Request array represents an array of storing indexes of tracks that have been requested. 'head' is the position of disk head.</li>
+            <li>Find the positive distance of all tracks in the request array from the head.</li>
+            <li>Find a track from the requested array which has not been accessed/serviced yet and has a minimum distance from the head.</li>
+            <li>Increment the total seek count with this distance.</li>
+            <li>Currently serviced track position now becomes the new head position.</li>
+            <li>Go to step 2 until all tracks in the request array have not been serviced.
+            </li>
+        </ul>
+    </div>
+<br><br><br><br>
+    <div class="advantages">
+        <h1>Advantages of SSTF</h1>
+        <h4>Here, are pros/benefits of using SSTF scheduling algorithm:</h4>
+        <ul>
+            <li>It reduces the total seek time as compared to FCFS.</li><br>
+            <li>It provides increased throughput.</li><br>
+            <li>It provides less average response time and waiting time.</li><br>
+        </ul>
+    </div>
+<br><br><br><br>
+<div class="disadvantages">
+    <h1>Disadvantages of SSTF</h1>
+    <h4>Here, are cons/ drawbacks of using SSTF scheduling algorithm:</h4>
+    <ul>
+        <li>There is an overhead of finding out the closest request.</li><br>
+        <li>The requests which are far from the head might starve for the CPU.</li><br>
+        <li>It provides high variance in response time and waiting time.</li><br>
+        <li>Switching the direction of head frequently slows down the algorithm.</li>
+    </ul>
+</div>
+<br><br><br><br>
+</body>
+</html>

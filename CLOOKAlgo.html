@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-LOOK Algorithm</title>
+    <style>
+        body{
+            background-color: rgb(226, 245, 197);
+        }
+    </style>
+</head>
+<body>
+    <script>
+    var size = prompt("Enter no. of requests : ");
+    var request = [];
+
+    //Input
+    for(let i=0;i<=size; i++){
+        request[i] = prompt("Enter Request Inputs :");
+    }
+    
+    var head = prompt("Enter head : ");
+
+    var direction = prompt("Enter Direction : ");
+
+    //Display Values
+    for(let i =0; i<=size; i++){
+    document.write( request[i] + " ")
+    }
+
+    document.write("<br><br>Initial position of head: " + head + "</br>");
+
+    CLOOK(request , head);
+
+    function CLOOK(request, head)
+     {
+         let seek_count = 0;
+         let distance, cur_track;
+  
+         let left = [];
+         let right = [];
+         let seek_sequence = [];
+
+         for(let i = 0; i < size; i++)
+         {
+             if (request[i] < head)
+                 left.push(request[i]);
+             if (request[i] > head)
+                 right.push(request[i]);
+         }
+
+         left.sort(function(a, b){return a - b});
+         right.sort(function(a, b){return a - b});
+
+         for(let i = 0; i < right.length; i++)
+         {
+             cur_track = right[i];
+
+             seek_sequence.push(cur_track);
+
+             distance = Math.abs(cur_track - head);
+
+             seek_count += distance;
+
+             head = cur_track;
+         }
+
+         seek_count += Math.abs(head - left[0]);
+         head = left[0];
+
+         for(let i = 0; i < left.length; i++)
+         {
+             cur_track = left[i];
+
+             seek_sequence.push(cur_track);
+
+             distance = Math.abs(cur_track - head);
+
+             seek_count += distance;
+
+             head = cur_track;
+         }
+  
+         document.write("<br><br>Total number of seek " +
+                           "operations = " + seek_count + "</br>");
+  
+         document.write("<br><br>Seek Sequence is" + "</br>");
+  
+         for(let i = 0; i < seek_sequence.length; i++)
+         {
+             document.write(seek_sequence[i] + "</br><br>");
+         }
+     }
+    </script>
+    <canvas id="myCanvas" width="200" height="200" style="border: 1px solid red"></canvas>
+    <script>
+        
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(10 , 0);
+        ctx.lineTo(10 , 200);
+        ctx.stroke();
+
+        
+        ctx.moveTo(20 , 0);
+        ctx.lineTo(20 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(30 , 0);
+        ctx.lineTo(30 , 200);
+        ctx.stroke();
+       
+        ctx.moveTo(40 , 0);
+        ctx.lineTo(40 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(50 , 0);
+        ctx.lineTo(50 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(60 , 0);
+        ctx.lineTo(60 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(70 , 0);
+        ctx.lineTo(70 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(80 , 0);
+        ctx.lineTo(80 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(90 , 0);
+        ctx.lineTo(90 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(100 , 0);
+        ctx.lineTo(100 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(110 , 0);
+        ctx.lineTo(110 , 200);
+        ctx.stroke();
+       
+        ctx.moveTo(120 , 0);
+        ctx.lineTo(120 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(130 , 0);
+        ctx.lineTo(130 , 200);
+        ctx.stroke();
+       
+        ctx.moveTo(140 , 0);
+        ctx.lineTo(140 , 600);
+        ctx.stroke();
+        
+        ctx.moveTo(150 , 0);
+        ctx.lineTo(150 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(160 , 0);
+        ctx.lineTo(160 , 200);
+        ctx.stroke();
+       
+        ctx.moveTo(170 , 0);
+        ctx.lineTo(170 , 200);
+        ctx.stroke();
+       
+        ctx.moveTo(180 , 0);
+        ctx.lineTo(180 , 200);
+        ctx.stroke();
+        
+        ctx.moveTo(190 , 0);
+        ctx.lineTo(190 , 200);
+        ctx.stroke();
+
+        ctx.moveTo(50 , 20);
+        ctx.lineTo(60 , 40);
+        ctx.lineTo(79 , 70);
+        ctx.lineTo(92 , 90);
+        ctx.lineTo(114 , 120);
+        ctx.lineTo(176 , 140);
+        ctx.lineTo(11 , 160);
+        ctx.lineTo(34 , 180);
+        ctx.lineTo(41 , 190);
+
+        ctx.stroke();
+        
+    </script>
+</body>
+</html>

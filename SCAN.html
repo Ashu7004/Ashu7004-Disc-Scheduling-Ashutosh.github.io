@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCAN</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(226, 245, 197);
+        }
+        .scan{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            text-align: center; 
+            text-shadow: -3px 3px 5px red;   
+        }
+        p{
+            font-size: 22px;
+        }
+        .what-scan{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 400px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .what-scan:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        .algorithm{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;       
+        }
+        .algorithm:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        li{
+            font-weight: bold;
+        }
+        .advantages{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .advantages:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color: rgb(206, 229, 249);
+            color: black;
+            box-shadow: -10px -10px 10px 0.5px gray ;
+        }
+        .disadvantages{
+            padding: 20px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: 0.3 ease ease-in-out;
+        }
+        .disadvantages:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+            background-color:rgb(206, 229, 249);
+            color:black;
+            box-shadow: -10px -10px 10px 0.5px gray;
+        }    
+    </style>
+</head>
+<body>
+    <div class="scan">
+        <h1>SCAN</h1>
+    </div>
+    <div class="scan">
+    <h1>What is SCAN Disk Scheduling Algorithm : What is, Example, Program</h1>
+    </div>
+    <div class="what-scan">
+    <h1>What is SCAN?</h1>
+    <p>Given an array of disk track numbers and initial head position, our task is to find the total number of seek operations done to access all the requested tracks if SCAN disk scheduling algorithm is used.
+    <br><br>
+    <b>SCAN (Elevator) algorithm :</b><br>
+        In SCAN disk scheduling algorithm, head starts from one end of the disk and moves towards the other end, servicing requests in between one by one and reach the other end. Then the direction of the head is reversed and the process continues as head continuously scan back and forth to access the disk. So, this algorithm works as an elevator and hence also known as the elevator algorithm. As a result, the requests at the midrange are serviced more and those arriving behind the disk arm will have to wait.</p>
+    </div>
+<br><br><br><br>
+    <div class="algorithm">
+        <h1>Algorithm</h1>
+        <ul>
+            <li>Let Request array represents an array storing indexes of tracks that have been requested in ascending order of their time of arrival. ‘head’ is the position of disk head.</li>
+            <li>Let direction represents whether the head is moving towards left or right.</li>
+            <li>In the direction in which head is moving service all tracks one by one.</li>
+            <li>Calculate the absolute distance of the track from the head.</li>
+            <li>Increment the total seek count with this distance.</li>
+            <li>Currently serviced track position now becomes the new head position.</li>
+            <li>Go to step 3 until we reach at one of the ends of the disk.</li>
+            <li>If we reach at the end of the disk reverse the direction and go to step 2 until all tracks in request array have not been serviced.</li>
+        </ul>
+    </div>
+<br><br><br><br>
+    <div class="advantages">
+        <h1>Advantages of SCAN</h1>
+        <h4>Here, are pros/benefits of using SCAN scheduling algorithm:</h4>
+        <ul>
+            <li>This algorithm is simple and easy to understand.</li><br>
+            <li>SCAN algorithm have no starvation.</li><br>
+            <li>This algorithm is better than FCFS Scheduling algorithm .</li>
+        </ul>
+    </div>
+<br><br><br><br>
+<div class="disadvantages">
+    <h1>Disadvantages of SCAN</h1>
+    <h4>Here, are cons/ drawbacks of using SCAN scheduling algorithm:</h4>
+    <ul>
+        <li>More complex algorithm to implement.</li><br>
+        <li>This algorithm is not fair because it cause long waiting time for the cylinders just visited by the head.</li><br>
+        <li>It causes the head to move till the end of the disk in this way the requests arriving ahead of the arm position would get immediate service but some other requests that arrive behind the arm position will have to wait for the request to complete.</li><br>
+    </ul>
+</div>
+<br><br><br><br>
+</body>
+</html>

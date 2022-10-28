@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="frontstyle.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <div>
+            <h2>Disc Scheduling</h2>
+        </div>
+            <div class="nav-links">
+                <ul>
+
+                    <li><a href="about.html">About</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="simulation-image">
+        <table>
+            <tr>
+        <td><img src="images/simulation.png" alt=""></td>
+      
+        <td><p>A process needs two type of time, CPU time and IO time. For I/O, it requests the Operating system to access the disk.However, the operating system must be fare enough to satisfy each request and at the same time, operating system must maintain the efficiency and speed of process execution.The technique that operating system uses to determine the request which is to be satisfied next is called disk scheduling.Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O Scheduling.</p></td>
+           </tr>
+    </table>
+    </div>
+
+    <div class="btn-1">
+        <ul>
+            <li><a href="#"><button class="btn">SIMULATE</button></a>
+        
+        <div class="btn-menu-1">
+            <ul>
+                <div class="input"><li><a href="FCFSAlgo.html">FCFS Algo</a></li></div>
+                <div class="input"><li><a href="#">SSTF Algo</a></li></div>
+                <div class="input"><li><a href="SCANAlgo.html">SCAN Algo</a></li></div>
+                <div class="input"><li><a href="CSCANAlgo.html">C-SCAN Algo</a></li></div>
+                <div class="input"><li><a href="LOOKAlgo.html">LOOK Algo</a></li></div>
+                <div class="input"><li><a href="CSCANAlgo.html">C-LOOK Algo</a></li></div>
+            </ul>
+        </div>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="what-disk">
+        <h1>What is Disk Scheduling?</h1>
+        <p>
+            Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O scheduling. 
+        </p>
+        <h2>Disk Scheduling is important because:</h2>
+        <ul>
+            <li>Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by the disk controller. Thus other I/O requests need to wait in the waiting queue and need to be scheduled.</li>
+            <li>Two or more request may be far from each other so can result in greater disk arm movement.</li>
+            <li>Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient manner.</li>
+        </ul>
+        <br><br><br>
+        <h3>There are many Disk Scheduling Algorithms but before discussing them let’s have a quick look at some of the important terms: </h3>
+        <ul>
+            <li>Seek Time: Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or write. So the disk scheduling algorithm that gives minimum average seek time is better.</li><br>
+            <li>Rotational Latency: Rotational Latency is the time taken by the desired sector of disk to rotate into a position so that it can access the read/write heads. So the disk scheduling algorithm that gives minimum rotational latency is better.</li><br>
+            <li>Transfer Time: Transfer time is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred.</li><br>
+            <li>Disk Access Time: Disk Access Time is:</li><br>
+
+            <p>Disk Access Time = Seek Time + 
+                Rotational Latency + 
+                Transfer Time</p>
+
+            <li><img src="images/disc-scheduling-algorithms.png" alt=""></li>
+            <li>Disk Response Time: Response Time is the average of time spent by a request waiting to perform its I/O operation. Average Response time is the response time of the all requests. Variance Response Time is measure of how individual request are serviced with respect to average response time. So the disk scheduling algorithm that gives minimum variance response time is better.</li>
+        </ul>
+    </div>
+<hr>
+
+    <div class="various-types"><h1>Varoius types of disc scheduling</h1></div>
+    <div class="various-types-property">
+        <div class="property">
+            <div><h1>FCFS</h1></div>
+            <div class="pro-para"><p>FCFS is an operating system scheduling algorithm that automatically executes queued requests and processes by order of their arrival</p></div>
+            <div><a href="FCFS.html"><h1><button  class="btn-fcfs">Read more</button></h1></a></div>
+        </div>
+        <div class="property">
+            <div><h1>SSTF</h1></div>
+            <div class="pro-para">
+                <p>This algorithm services that request next which requires least number of head movements from its current position regardless of the direction.</p>
+            </div>
+            <div><a href="SSTF.html"><h1><button  class="btn-fcfs">Read more</button></h1></a></div>
+        </div>
+
+        <div class="property">
+            <div><h1>SCAN</h1></div>
+            <div class="pro-para">
+                <p>Our task is to find the total number of seek operations done to access all the requested tracks if SCAN disk scheduling algorithm is used.</p>
+            </div>
+            <div><a href="SCAN.html"><h1><button  class="btn-fcfs">Read more</button></h1></a></div>
+        </div>
+
+        <div class="property">
+            <div><h1>C-SCAN</h1></div>
+            <div class="pro-para">
+                <p>a modified version of the SCAN disk scheduling algorithm that deals with the inefficiency of the SCAN algorithm by servicing the requests more uniformly.</p>
+            </div>
+            <div><a href="C-SCAN.html"><h1><button  class="btn-fcfs">Read more</button></h1></a></div>
+        </div>
+
+        <div class="property">
+            <div><h1>LOOK</h1></div>
+            <div class="pro-para">
+                <p>LOOK is the advanced version of SCAN (elevator) disk scheduling algorithm which gives slightly better seek time than any other algorithm in the hierarchy.</p>
+            </div>
+            <div><a href="LOOK.html"><h1><button  class="btn-fcfs">Read more</button></h1></a></div>
+        </div>
+
+        <div class="property">
+            <div><h1>C-LOOK</h1></div>
+            <div class="pro-para">
+                <p>Our task is to find the total number of seek operations done to access all the requested tracks if C-LOOK disk scheduling algorithm is used.</p>
+            </div><a href="C-LOOK.html"><h1><button  class="btn-fcfs">Read more</button></h1></a></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            Ashutosh kumar  12016432  k20nr
+        </div>
+    </footer>
+</body>
+</html>

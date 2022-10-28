@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About</title>
+</head>
+<body>
+    <nav>
+        <h1>Disk Scheduling Algorithms</h1>
+    </nav>
+
+    <section class="container">
+
+        <div class="what-block">
+            
+            <div id="what-block-h1"><h1>What is Disk Scheduling Algorithm</h1></div>
+            <div class="what-block-para">
+                <img id="what-block-img1" src="images/img1.png" alt="">
+                <p>A process needs two type of time, CPU time and IO time. For I/O, it requests the Operating system to access the disk.However, the operating system must be fare enough to satisfy each request and at the same time, operating system must maintain the efficiency and speed of process execution.The technique that operating system uses to determine the request which is to be satisfied next is called disk scheduling.Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O Scheduling.</p>
+
+            </div>
+        </div>
+        <div class="why-block">
+            <div class="why-block-h1"><h1>Why we need Disk Scheduling Algorithm</h1></div>
+            <img src="#" alt="">
+            <p>Disk scheduling is important because:
+                Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by the disk controller.Thus other I/O requests need to wait in the waiting queue and need to be scheduled.
+                Two or more request may be far from each other so can result in greater disk arm movement.
+                Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient manner.</p>
+        </div>
+        <div class="types-block">
+            <div class="types-block-h1"><h1>Varoius types of Disk Scheduling Algorithms</h1></div>
+            <img src="#" alt="">
+            <ul>
+                <li class="list-1">
+                    <a href="FCFSAlgo.html"><h1 class="list-1-h1"> First Come First Serve</h1></a>
+                    <p>FCFS is the simplest disk scheduling algorithm. As the name suggests, this algorithm entertains requests in the order they arrive in the disk queue. The algorithm looks very fair and there is no starvation (all requests are serviced sequentially) but generally, it does not provide the fastest service.</p>
+                </li>
+                <li class="list-1">
+                    <a href="#"><h1 class="list-1-h1">SSTF - Shortest Seek Time First</h1></a>
+                    <p>Shortest seek time first (SSTF) algorithm selects the disk I/O request which requires the least disk arm movement from its current position regardless of the direction. It reduces the total seek time as compared to FCFS. It allows the head to move to the closest track in the service queue.</p>
+                </li>
+                <li class="list-1">
+                    <a href="SCANAlgo.html"><h1 class="list-1-h1">SCAN</h1></a>
+                    <p>n SCAN disk scheduling algorithm, head starts from one end of the disk and moves towards the other end, servicing requests in between one by one and reach the other end. Then the direction of the head is reversed and the process continues as head continuously scan back and forth to access the disk.</p>
+                </li>
+                <li class="list-1">
+                    <a href="CSCANAlgo.html"><h1 class="list-1-h1">Circular SCAN</h1></a>
+                    <p>Circular SCAN (C-SCAN) scheduling algorithm is a modified version of SCAN disk scheduling algorithm that deals with the inefficiency of SCAN algorithm by servicing the requests more uniformly. Like SCAN (Elevator Algorithm) C-SCAN moves the head from one end servicing all the requests to the other end.</p>
+                </li>
+                <li class="list-1">
+                    <a href="LOOKAlgo.html"><h1 class="list-1-h1">LOOK</h1></a>
+                    <p>The LOOK algorithm services request similarly as SCAN algorithm meanwhile it also “looks” ahead as if there are more tracks that are needed to be serviced in the same direction. If there are no pending requests in the moving direction the head reverses the direction and start servicing requests in the opposite direction.</p>
+                </li>
+                <li class="list-1">
+                    <a href="CLOOKAlgo.html"><h1 class="list-1-h1">C-LOOK</h1></a>
+                    <p>In this algorithm, the head services requests only in one direction until all the requests in this direction are not serviced and then jumps back to the farthest request on the other direction and service the remaining requests which gives a better uniform servicing as well as avoids wasting seek time for going till the end of the disk.</p>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+</body>
+</html>
